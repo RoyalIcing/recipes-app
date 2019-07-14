@@ -6,7 +6,7 @@ import "./App.css";
 
 import { history } from "./routing/browser";
 import { Routes } from "./routing/Routes";
-import { PrimaryNav } from "./containers/PrimaryNav/PrimaryNav";
+import { PrimaryNav } from "./components/PrimaryNav/PrimaryNav";
 import { store } from "./redux/store";
 
 function App() {

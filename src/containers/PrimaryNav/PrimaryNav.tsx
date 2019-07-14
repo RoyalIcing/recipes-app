@@ -10,6 +10,7 @@ export function PrimaryNav(): JSX.Element {
         <li>
           <Link to="/">Home</Link>
           <Link to="/recipes">Recipes</Link>
+          <Link to="/counter">Counter</Link>
         </li>
       </ul>
     </nav>

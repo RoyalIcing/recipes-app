@@ -23,4 +23,8 @@ describe("Routes component", () => {
   it("has link to recipes", () => {
     expect(queries.getByText("Recipes")).toHaveAttribute("href", "/recipes");
   });
+
+  it("has link to counter", () => {
+    expect(queries.getByText("Counter")).toHaveAttribute("href", "/counter");
+  });
 });

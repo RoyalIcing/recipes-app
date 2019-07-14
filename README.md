@@ -1,4 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Recipes App
+
+## What was done
+
+- React app using [Create React App](https://github.com/facebook/create-react-app).
+- All code written in TypeScript, which aides in both writing and reading code.
+- Added recipes.json loaded using [babel macros](https://github.com/kentcdodds/babel-plugin-macros)
+- Added React Router, with a history object which allows subscribing to changes independently of React.
+- Added Routes component which can be unit tested in isolation.
+- Added PrimaryNav for navigating between pages.
+- Unit tested components using [react-testing-library](https://github.com/testing-library/react-testing-library)
+- Added some CSS variables defined in `styling/_variables.scss`
+- Added Redux in the "ducks" style of grouping actions and reducers.
+- Minimized boilerplate with Redux by exploiting TypeScript types for everything. Incorrect action names or typos will be caught at compile time.
+- Added two reducers, one `counter` to discover a pattern with Redux and TypeScript, and another `recipesContent` for loading and storing recipes.
+- Added testing of actions and reducers, with a mocked store using `redux-mock-store`.
+- Added types for packages without in `deps.d.ts`
+
+## What I’d improve in the future
+
+- Make recipes content actions and reducer reusable for other requests/responses.
+- Find out what browsers must be supported, and therefore if features like CSS variables and grid are possible.
+- Connect to a real API, or at least write a little dummy API to write against.
+- Write end to end tests using puppeteer or cypress.
+
+----
 
 ## Available Scripts
 
@@ -42,27 +67,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

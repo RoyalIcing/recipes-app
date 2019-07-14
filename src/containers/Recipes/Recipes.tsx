@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { AppDispatch, StoreState } from "../../redux/types";
+import { StoreState } from "../../redux/types";
 import { RecipesContentState } from "../../redux/recipesContent/reducer";
 import { requestRecipesContent } from "../../redux/recipesContent/actions";
 
@@ -9,16 +9,16 @@ interface RecipesProps {
   loading: boolean;
   recipesData: RecipesContentState["data"];
   error: Error | null;
-  dispatch: AppDispatch;
+  onLoad: () => void;
 }
 function Recipes({
   loading,
   recipesData,
   error,
-  dispatch
+  onLoad
 }: RecipesProps): JSX.Element {
   useEffect(() => {
-    dispatch(requestRecipesContent());
+    onLoad();
   }, []);
 
   if (loading) {
@@ -47,8 +47,8 @@ function Recipes({
 interface ConnectedRecipesProps {}
 
 export const ConnectedRecipes = connect<
-  Omit<RecipesProps, "dispatch">,
-  Pick<RecipesProps, "dispatch">,
+  Omit<RecipesProps, "onLoad">,
+  Pick<RecipesProps, "onLoad">,
   ConnectedRecipesProps,
   Pick<StoreState, "recipesContent">
 >(
@@ -57,5 +57,7 @@ export const ConnectedRecipes = connect<
     recipesData: recipesContent.data,
     error: recipesContent.error
   }),
-  (dispatch: AppDispatch) => ({ dispatch })
+  {
+    onLoad: requestRecipesContent
+  }
 )(Recipes);

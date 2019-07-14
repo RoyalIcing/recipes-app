@@ -38,7 +38,7 @@ interface RecipeItem {
   authors: Array<Author>;
 }
 
-interface RecipesData {
+export interface RecipesData {
   contents: Array<RecipeItem>;
 }
 

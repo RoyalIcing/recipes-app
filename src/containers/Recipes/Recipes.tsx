@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { StoreState } from "../../redux/types";
 import { RecipesContentState } from "../../redux/recipesContent/reducer";
 import { requestRecipesContent } from "../../redux/recipesContent/actions";
+import { CardGrid } from "../../components/CardGrid/CardGrid";
 
 interface RecipesProps {
   loading: boolean;
@@ -40,6 +41,12 @@ function Recipes({
   return (
     <div>
       <p>Found {recipesData.contents.length} recipes</p>
+      <CardGrid items={recipesData.contents.map(recipeContent => ({
+        id: `${recipeContent.contentId}`,
+        title: recipeContent.title,
+        pageURL: "#",
+        image1XURL: recipeContent.imageList.landscape32medium1x.url
+      }))} />
     </div>
   );
 }

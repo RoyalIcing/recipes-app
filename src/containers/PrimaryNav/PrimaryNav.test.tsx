@@ -4,7 +4,7 @@ import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 
-describe("Routes component", () => {
+describe("PrimaryNav component", () => {
   let queries: ReturnType<typeof render>;
   beforeAll(() => {
     queries = render(

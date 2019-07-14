@@ -1,0 +1,17 @@
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  // align-items: stretch;
+
+  &__item {
+    max-width: 480px;
+
+    > * {
+      height: 100%;
+    }
+  }
+}

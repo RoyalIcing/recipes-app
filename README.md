@@ -1,5 +1,7 @@
 # Recipes App
 
+![Screenshot of the recipes app](./docs/screenshot.png)
+
 ## What was done
 
 - React app using [Create React App](https://github.com/facebook/create-react-app).

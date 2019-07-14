@@ -22,6 +22,11 @@
 - Find out what browsers must be supported, and therefore if features like CSS variables and grid are possible.
 - Connect to a real API, or at least write a little dummy API to write against.
 - Write end to end tests using puppeteer or cypress.
+- Better error handling with helpful error messages.
+- Show or use tags in recipes in some way.
+- Improve design of page and cards.
+- Link recipes properly.
+- Pluralisation handling (1 recipe vs 1 recipes)
 
 ----
 

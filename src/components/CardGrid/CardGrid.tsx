@@ -15,8 +15,8 @@ export function CardGrid({ items }: CardGridProps): JSX.Element {
   return (
     <div className="CardGrid">
       {items.map(item => (
-        <div className="CardGrid__item">
-          <Card key={item.id} {...item} />
+        <div key={item.id} className="CardGrid__item">
+          <Card {...item} />
         </div>
       ))}
     </div>

@@ -25,6 +25,7 @@ interface Author {}
 
 interface RecipeItem {
   contentId: number;
+  contentType?: 1;
   title: string;
   urlPartial: string;
   isFavourited: boolean;

@@ -30,7 +30,7 @@ function Recipes({
     return <div>Error loading: {error.message}</div>;
   }
 
-  if (recipesData === null) {
+  if (recipesData === null || recipesData.contents.length === 0) {
     return (
       <div>
         <p>No recipes found.</p>
@@ -44,7 +44,7 @@ function Recipes({
       <CardGrid items={recipesData.contents.map(recipeContent => ({
         id: `${recipeContent.contentId}`,
         title: recipeContent.title,
-        pageURL: "#",
+        pageURL: `#${recipeContent.urlPartial}`,
         image1XURL: recipeContent.imageList.landscape32medium1x.url
       }))} />
     </div>

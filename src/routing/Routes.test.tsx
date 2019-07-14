@@ -17,16 +17,14 @@ describe("Routes component", () => {
   describe("when path is /", () => {
     it("renders home page", () => {
       const { getByText } = subject({ path: "/" });
-      // getByText throws when not found
-      getByText("Home");
+      expect(getByText("Home")).toBeInstanceOf(HTMLElement);
     });
   });
 
   describe("when path is /unknown", () => {
     it("renders not found page with path", () => {
       const { getByText } = subject({ path: "/unknown" });
-      // getByText throws when not found
-      getByText("Page not found: /unknown");
+      expect(getByText("Page not found: /unknown")).toBeInstanceOf(HTMLElement);
     });
   });
 });

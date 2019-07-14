@@ -1,8 +1,12 @@
 import { CounterAction } from "./counter/actions";
+import { RecipesContentAction } from "./recipesContent/actions";
 import { rootReducer } from "./rootReducer";
 
-export type Action = CounterAction;
+export type AppAction = CounterAction | RecipesContentAction;
 
-export type Dispatch = (action: Action) => void;
+export interface AppDispatch {
+  (action: AppAction): AppAction;
+  (action: (dispatch: AppDispatch) => void): AppAction;
+}
 
 export type StoreState = ReturnType<typeof rootReducer>;

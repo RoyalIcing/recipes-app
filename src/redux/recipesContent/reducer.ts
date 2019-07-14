@@ -1,7 +1,7 @@
 import { RecipesContentAction } from "./actions";
 import { RecipesData } from "../../api/recipes";
 
-interface RecipesContentState {
+export interface RecipesContentState {
   fetching: boolean;
   error: Error | null;
   data: RecipesData | null;

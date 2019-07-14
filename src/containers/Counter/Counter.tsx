@@ -1,5 +1,5 @@
 import React from "react";
-import { Dispatch, StoreState } from "../../redux/types";
+import { AppDispatch, StoreState } from "../../redux/types";
 import { connect } from "react-redux";
 
 function Counter({
@@ -7,7 +7,7 @@ function Counter({
   dispatch
 }: {
   count: number;
-  dispatch: Dispatch;
+  dispatch: AppDispatch;
 }): JSX.Element {
   return (
     <div>

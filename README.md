@@ -23,10 +23,13 @@
 - Connect to a real API, or at least write a little dummy API to write against.
 - Write end to end tests using puppeteer or cypress.
 - Better error handling with helpful error messages.
+- Add error boundaries.
 - Show or use tags in recipes in some way.
-- Improve design of page and cards.
-- Link recipes properly.
+- Improve design of page and cards with custom fonts, polish, etc.
+- Link recipes to individual pages.
 - Pluralisation handling (1 recipe vs 1 recipes)
+- Work out a system for theming.
+- Cache data so we don’t have to reload on every navigation.
 
 ----
 

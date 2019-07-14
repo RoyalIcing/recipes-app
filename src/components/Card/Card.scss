@@ -1,0 +1,30 @@
+.Card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  &__link {
+    display: block;
+    text-decoration: none;
+  }
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--mid-color);
+    letter-spacing: 1px;
+  }
+}

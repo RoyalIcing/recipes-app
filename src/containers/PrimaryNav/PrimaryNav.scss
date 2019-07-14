@@ -1,0 +1,17 @@
+.PrimaryNav {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    padding: 1rem;
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

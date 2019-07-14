@@ -2,11 +2,47 @@
 
 ![Screenshot of the recipes app](./docs/screenshot.png)
 
+## Docs
+
+Browser React app written using TypeScript and SCSS.
+
+- **api**: the mock api that fetches recipes
+- **components**: pure, presentation only components
+- **containers**: components that connect with Redux
+- **redux**: the store, and actions and reducers grouped similar to the [ducks style](https://github.com/erikras/ducks-modular-redux)
+- **routing**: the history object, and configured routes
+- **styling**: shared CSS and variables
+
+In the project directory, you can run:
+
+### Running: `npm start`
+
+Runs the app in development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Testing: `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+
+- Tests are written and run using **Jest**
+- React is tested using [**react-testing-library**]((https://github.com/testing-library/react-testing-library))
+  - These tests are focused on the HTML, not the hierarchy of React components. This means components can be refactored and renamed at will, without breaking the tests. They test the behaviour, not the implementation details.
+- Redux is tested using [**redux-mock-store**](https://github.com/dmitry-zaets/redux-mock-store)
+
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### Building: `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
 ## What was done
 
 - React app using [Create React App](https://github.com/facebook/create-react-app).
 - All code written in TypeScript, which aides in both writing and reading code.
-- Added recipes.json loaded using [babel macros](https://github.com/kentcdodds/babel-plugin-macros)
+- Added recipes.json fetched with simulated delay, loaded using [babel macros](https://github.com/kentcdodds/babel-plugin-macros)
 - Added React Router, with a history object which allows subscribing to changes independently of React.
 - Added Routes component which can be unit tested in isolation.
 - Added PrimaryNav for navigating between pages.
@@ -35,32 +71,7 @@
 
 ----
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Other Available Scripts
 
 ### `npm run eject`
 
